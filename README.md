@@ -52,3 +52,55 @@ npm uninstall autoprefixer
 
 git init
 git status
+git add .
+
+git config --global user.email "jbsenapps@gmail.com"
+git config --global user.name "jbs1972"
+
+git commit -m "first commit"
+git branch -M main
+
+git branch
+git remote add origin https://github.com/jbs1972/git_react_demo.git
+git push -u origin main
+
+create a new folder "branches"
+cd .\branches\
+git clone https://github.com/jbs1972/git_react_demo.git
+cd .\git_react_demo\
+
+npm i
+npm start
+
+git checkout -b feature/footer
+git branch
+
+Create a new file Footer.js in the new branch:
+=>
+function Footer() {
+  return (
+    <footer className="text-center mt-10">
+      <p>© 2025 React Lab Project</p>
+    </footer>
+  );
+}
+export default Footer;
+
+git status
+git add .
+git commit -m "Footer.js component added"
+git push origin feature/footer
+
+git checkout main
+git branch
+
+git merge feature/footer
+git log -> q to exit
+git log --oneline --graph
+
+git branch -d feature/footer
+git branch -D feature/footer (force delete)
+ - This command deletes the local copy of the branch from your machine.
+git push origin --delete feature/footer
+ - This command deletes the branch from the remote server (e.g., GitHub, GitLab, or Bitbucket).
+
