@@ -94,8 +94,17 @@ git push origin feature/footer
 git checkout main
 git branch
 
+-------------------------------------------------------
 git merge feature/footer
 git log -> q to exit
+-------------------------------------------------------
+Recommended Workflow: Use a Pull Request 
+The standard, most robust way to merge branches, especially when multiple people are involved, is to use a Pull Request (PR) or Merge Request (MR) via your central remote hosting service (GitHub, GitLab, etc.).
+Ensure your feature/footer branch is pushed to the remote: git push origin feature/footer
+Go to your repository's website (e.g., GitHub).
+1. Open a new Pull Request from feature/footer into main.
+2. Review the code, resolve conflicts online, and complete the merge via the UI. This is generally the safest way to manage merging across different physical machines.
+
 git log --oneline --graph
 
 git branch -d feature/footer
