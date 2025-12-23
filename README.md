@@ -105,6 +105,12 @@ Go to your repository's website (e.g., GitHub).
 1. Open a new Pull Request from feature/footer into main.
 2. Review the code, resolve conflicts online, and complete the merge via the UI. This is generally the safest way to manage merging across different physical machines.
 
+FROM feature/footer branch:
+git checkout main
+git pull origin main
+git merge feature/footer
+git push origin main
+
 git log --oneline --graph
 
 git branch -d feature/footer
